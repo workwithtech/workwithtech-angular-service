@@ -1,0 +1,12 @@
+
+<form #messageForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input [(ngModel)]="model.name" name="name" #name="ngModel" type="text" class="form-control" id="name" required/>
+    </div>
+  <div class="form-group">
+    <label for="name">Nachricht</label>
+    <textarea #data="ngModel" [(ngModel)]="model.data" name="data" type="text" class="form-control" id="data" required><</textarea>
+  </div>
+    <button (click)="add()" type="submit" [disabled]="!messageForm.valid"  class="btn btn-success">Submit</button>
+  </form>
